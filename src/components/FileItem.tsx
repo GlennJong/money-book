@@ -107,7 +107,7 @@ const FileItem = ({ isNew, file, onSelect }: { isNew: boolean, file: DriveFile, 
             <button 
               onClick={() => {
                 const scriptUrl = file.scriptUrl;
-                window.open(scriptUrl, 'auth', 'width=600,height=400');
+                window.open(`${scriptUrl}?action=authorize`, 'auth', 'width=600,height=400');
                 setIsAccessed(true);
               }}
               style={{

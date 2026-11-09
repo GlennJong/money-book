@@ -181,7 +181,7 @@ const DiscoverScreen = ({ transactions }: DiscoverScreenProps) => {
                     <Tooltip 
                         contentStyle={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: '8px' }}
                         itemStyle={{ color: 'var(--text-main)' }}
-                        formatter={(value: number | undefined) => value !== undefined ? `$${value.toLocaleString()}` : '$0'} 
+                        formatter={(value) => value !== undefined ? `$${Number(value).toLocaleString()}` : '$0'} 
                     />
                     <Legend />
                 </PieChart>
